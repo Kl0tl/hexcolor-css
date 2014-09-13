@@ -1,0 +1,14 @@
+{
+  "name": "hexcolor-css",
+  "main": "hexcolor-css.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Kl0tl/hexcolor-css",
+  "authors": [
+    "Cyril Sobierajewicz <sobierajewicz.cyril@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "hexcolor": "Kl0tl/hexcolor",
+    "String.prototype.repeat": "mathiasbynens/String.prototype.repeat#~0.2.0"
+  }
+}
