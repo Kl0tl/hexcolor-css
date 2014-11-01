@@ -65,5 +65,3 @@ hexcolor.format.csshex24 = function (color) {
 function parseInt16(value) {
   return parseInt(value, 16);
 }
-
-export * from hexcolor;
