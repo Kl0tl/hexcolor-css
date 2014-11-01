@@ -1,5 +1,3 @@
-import 'string.prototype.repeat';
-
 import * as hexcolor from 'hexcolor';
 
 import cssnames from './cssnames';
