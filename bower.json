@@ -6,6 +6,9 @@
   "authors": [
     "Cyril Sobierajewicz <sobierajewicz.cyril@gmail.com>"
   ],
+  "moduleType": [
+    "es6"
+  ],
   "license": "MIT",
   "dependencies": {
     "hexcolor": "Kl0tl/hexcolor"
