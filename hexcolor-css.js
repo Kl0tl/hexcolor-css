@@ -1,4 +1,4 @@
-import * as hexcolor from 'hexcolor';
+import { rgba, format } from 'hexcolor';
 
 import cssnames from './cssnames';
 import csscolors from './csscolors';
@@ -21,28 +21,28 @@ export function css(style) {
   }
 
   if ((matches = normalizedStyle.match(hex3))) {
-    return hexcolor.rgba(parseInt16(matches[1].repeat(2)), parseInt16(matches[2].repeat(2)),
+    return rgba(parseInt16(matches[1].repeat(2)), parseInt16(matches[2].repeat(2)),
       parseInt16(matches[3].repeat(2)), 255);
   }
 
   if ((matches = normalizedStyle.match(hex6))) {
-    return hexcolor.rgba(parseInt16(matches[1]), parseInt16(matches[2]), parseInt16(matches[3]), 255);
+    return rgba(parseInt16(matches[1]), parseInt16(matches[2]), parseInt16(matches[3]), 255);
   }
 
   if ((matches = normalizedStyle.match(rgb100))) {
-    return hexcolor.rgba(matches[1] * 2.55, matches[2] * 2.55, matches[3] * 2.55, 255);
+    return rgba(matches[1] * 2.55, matches[2] * 2.55, matches[3] * 2.55, 255);
   }
 
   if ((matches = normalizedStyle.match(rgb255))) {
-    return hexcolor.rgba(matches[1], matches[2], matches[3], 255);
+    return rgba(matches[1], matches[2], matches[3], 255);
   }
 
   if ((matches = normalizedStyle.match(rgba100))) {
-    return hexcolor.rgba(matches[1] * 2.55, matches[2] * 2.55, matches[3] * 2.55, matches[4] * 255);
+    return rgba(matches[1] * 2.55, matches[2] * 2.55, matches[3] * 2.55, matches[4] * 255);
   }
 
   if ((matches = normalizedStyle.match(rgba255))) {
-    return hexcolor.rgba(matches[1], matches[2], matches[3], matches[4] * 255);
+    return rgba(matches[1], matches[2], matches[3], matches[4] * 255);
   }
 
   return 0;
@@ -53,13 +53,13 @@ export function name(color) {
 };
 
 // #rgb
-hexcolor.format.csshex12 = function (color) {
-  return hexcolor.format(color, 'hex12').replace('0x', '#');
+format.csshex12 = function (color) {
+  return format(color, 'hex12').replace('0x', '#');
 };
 
 // #rrggbb
-hexcolor.format.csshex24 = function (color) {
-  return hexcolor.format(color, 'hex24').replace('0x', '#');
+format.csshex24 = function (color) {
+  return format(color, 'hex24').replace('0x', '#');
 };
 
 function parseInt16(value) {
